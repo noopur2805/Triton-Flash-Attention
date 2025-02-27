@@ -95,6 +95,31 @@ The visualization includes three key insights:
 
 This plot confirms that Triton Flash Attention provides significant performance benefits for longer sequences.
 
+## Detailed Benchmarking Results
+
+Best speedup: 2.40x (Batch=4, Seq=2048)
+Triton outperforms PyTorch in 17/28 configurations
+
+Configurations where Triton is faster:
+  Batch=1, Seq=2048: 1.60x speedup
+  Batch=1, Seq=4096: 2.00x speedup
+  Batch=1, Seq=8192: 2.19x speedup
+  Batch=2, Seq=1024: 1.16x speedup
+  Batch=2, Seq=2048: 1.91x speedup
+  Batch=2, Seq=4096: 2.14x speedup
+  Batch=2, Seq=8192: 2.23x speedup
+  Batch=4, Seq=512: 1.22x speedup
+  Batch=4, Seq=1024: 1.74x speedup
+  Batch=4, Seq=2048: 2.40x speedup
+  Batch=4, Seq=4096: 2.22x speedup
+  Batch=4, Seq=8192: 2.20x speedup
+  Batch=8, Seq=512: 1.51x speedup
+  Batch=8, Seq=1024: 1.94x speedup
+  Batch=8, Seq=2048: 2.29x speedup
+  Batch=8, Seq=4096: 2.23x speedup
+  Batch=8, Seq=8192: 2.34x speedup
+  
+
 ## When to Use Which Implementation
 
 ### Use Triton Flash Attention when:
