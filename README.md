@@ -50,39 +50,6 @@ numpy
 
 An NVIDIA GPU with CUDA support is required to run the Triton kernels.
 
-## Usage
-
-### Basic Usage
-
-```python
-import torch
-from flash_attention import TritonFlashAttention
-
-# Create model
-model_dim = 512
-num_heads = 8
-flash_attn = TritonFlashAttention(dim=model_dim, heads=num_heads)
-
-# Create input tensor
-batch_size = 4
-seq_len = 2048
-x = torch.randn(batch_size, seq_len, model_dim).cuda()
-
-# Run flash attention
-output = flash_attn(x)
-Running Benchmarks
-pythonCopyfrom flash_attention import benchmark
-
-# Define benchmark parameters
-batch_sizes = [1, 2, 4, 8]
-seq_lengths = [128, 256, 512, 1024, 2048, 4096, 8192]
-```
-### Run benchmark
-
-```python
-results = benchmark(batch_sizes, seq_lengths, dim=256, heads=8, num_runs=10)
-```
-
 
 ## Performance Visualization
 
