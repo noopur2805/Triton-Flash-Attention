@@ -50,20 +50,6 @@ numpy
 
 An NVIDIA GPU with CUDA support is required to run the Triton kernels.
 
-
-## Performance Visualization
-
-The following plot shows the performance comparison between Triton Flash Attention and standard PyTorch attention:
-
-![Flash Attention vs PyTorch Performance](flash_attention_benchmark.png)
-
-The visualization includes three key insights:
-1. **Execution Time vs Sequence Length** (left): Shows how both implementations scale with increasing sequence length across different batch sizes, with Triton showing better scaling for longer sequences.
-2. **Scaling with Batch Size** (middle): Demonstrates how performance changes when increasing batch size for a fixed sequence length of 512 tokens.
-3. **Speedup for Long Sequences** (right): Highlights the acceleration factor (PyTorch time / Triton time) achieved for sequences over 1024 tokens, showing consistent gains of 2.0-2.4x for longer sequences.
-
-This plot confirms that Triton Flash Attention provides significant performance benefits for longer sequences.
-
 ## Usage
 
 ### Basic Usage
@@ -94,6 +80,20 @@ seq_lengths = [128, 256, 512, 1024, 2048, 4096, 8192]
 # Run benchmark
 results = benchmark(batch_sizes, seq_lengths, dim=256, heads=8, num_runs=10)
 ```
+
+
+## Performance Visualization
+
+The following plot shows the performance comparison between Triton Flash Attention and standard PyTorch attention:
+
+![Flash Attention vs PyTorch Performance](flash_attention_benchmark.png)
+
+The visualization includes three key insights:
+1. **Execution Time vs Sequence Length** (left): Shows how both implementations scale with increasing sequence length across different batch sizes, with Triton showing better scaling for longer sequences.
+2. **Scaling with Batch Size** (middle): Demonstrates how performance changes when increasing batch size for a fixed sequence length of 512 tokens.
+3. **Speedup for Long Sequences** (right): Highlights the acceleration factor (PyTorch time / Triton time) achieved for sequences over 1024 tokens, showing consistent gains of 2.0-2.4x for longer sequences.
+
+This plot confirms that Triton Flash Attention provides significant performance benefits for longer sequences.
 
 ## When to Use Which Implementation
 
