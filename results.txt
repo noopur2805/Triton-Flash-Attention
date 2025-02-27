@@ -1,0 +1,193 @@
+Running benchmark on cuda
+Benchmarking: batch_size=1, seq_len=128, dim=256, heads=8
+  Triton Flash Attention: 0.28 ms
+  Standard Attention: 0.22 ms
+  Speedup: 0.79x
+  Max diff: 0.000000
+
+Benchmarking: batch_size=1, seq_len=256, dim=256, heads=8
+  Triton Flash Attention: 0.30 ms
+  Standard Attention: 0.23 ms
+  Speedup: 0.76x
+  Max diff: 0.000010
+
+Benchmarking: batch_size=1, seq_len=512, dim=256, heads=8
+  Triton Flash Attention: 0.29 ms
+  Standard Attention: 0.23 ms
+  Speedup: 0.79x
+  Max diff: 0.000010
+
+Benchmarking: batch_size=1, seq_len=1024, dim=256, heads=8
+  Triton Flash Attention: 0.30 ms
+  Standard Attention: 0.24 ms
+  Speedup: 0.79x
+  Max diff: 0.000006
+
+Benchmarking: batch_size=1, seq_len=2048, dim=256, heads=8
+  Triton Flash Attention: 0.36 ms
+  Standard Attention: 0.57 ms
+  Speedup: 1.60x
+  Max diff: 0.000005
+
+Benchmarking: batch_size=1, seq_len=4096, dim=256, heads=8
+  Triton Flash Attention: 0.77 ms
+  Standard Attention: 1.54 ms
+  Speedup: 2.00x
+  Max diff: 0.000004
+
+Benchmarking: batch_size=1, seq_len=8192, dim=256, heads=8
+  Triton Flash Attention: 2.46 ms
+  Standard Attention: 5.40 ms
+  Speedup: 2.19x
+  Max diff: 0.000003
+
+Benchmarking: batch_size=2, seq_len=128, dim=256, heads=8
+  Triton Flash Attention: 0.44 ms
+  Standard Attention: 0.24 ms
+  Speedup: 0.55x
+  Max diff: 0.000000
+
+Benchmarking: batch_size=2, seq_len=256, dim=256, heads=8
+  Triton Flash Attention: 0.29 ms
+  Standard Attention: 0.26 ms
+  Speedup: 0.89x
+  Max diff: 0.000009
+
+Benchmarking: batch_size=2, seq_len=512, dim=256, heads=8
+  Triton Flash Attention: 0.28 ms
+  Standard Attention: 0.25 ms
+  Speedup: 0.89x
+  Max diff: 0.000008
+
+Benchmarking: batch_size=2, seq_len=1024, dim=256, heads=8
+  Triton Flash Attention: 0.29 ms
+  Standard Attention: 0.34 ms
+  Speedup: 1.16x
+  Max diff: 0.000007
+
+Benchmarking: batch_size=2, seq_len=2048, dim=256, heads=8
+  Triton Flash Attention: 0.50 ms
+  Standard Attention: 0.96 ms
+  Speedup: 1.91x
+  Max diff: 0.000006
+
+Benchmarking: batch_size=2, seq_len=4096, dim=256, heads=8
+  Triton Flash Attention: 1.39 ms
+  Standard Attention: 2.97 ms
+  Speedup: 2.14x
+  Max diff: 0.000004
+
+Benchmarking: batch_size=2, seq_len=8192, dim=256, heads=8
+  Triton Flash Attention: 4.77 ms
+  Standard Attention: 10.61 ms
+  Speedup: 2.23x
+  Max diff: 0.000002
+
+Benchmarking: batch_size=4, seq_len=128, dim=256, heads=8
+  Triton Flash Attention: 0.26 ms
+  Standard Attention: 0.24 ms
+  Speedup: 0.94x
+  Max diff: 0.000000
+
+Benchmarking: batch_size=4, seq_len=256, dim=256, heads=8
+  Triton Flash Attention: 0.16 ms
+  Standard Attention: 0.14 ms
+  Speedup: 0.89x
+  Max diff: 0.000008
+
+Benchmarking: batch_size=4, seq_len=512, dim=256, heads=8
+  Triton Flash Attention: 0.17 ms
+  Standard Attention: 0.20 ms
+  Speedup: 1.22x
+  Max diff: 0.000009
+
+Benchmarking: batch_size=4, seq_len=1024, dim=256, heads=8
+  Triton Flash Attention: 0.28 ms
+  Standard Attention: 0.49 ms
+  Speedup: 1.74x
+  Max diff: 0.000007
+
+Benchmarking: batch_size=4, seq_len=2048, dim=256, heads=8
+  Triton Flash Attention: 0.74 ms
+  Standard Attention: 1.77 ms
+  Speedup: 2.40x
+  Max diff: 0.000005
+
+Benchmarking: batch_size=4, seq_len=4096, dim=256, heads=8
+  Triton Flash Attention: 2.59 ms
+  Standard Attention: 5.75 ms
+  Speedup: 2.22x
+  Max diff: 0.000003
+
+Benchmarking: batch_size=4, seq_len=8192, dim=256, heads=8
+  Triton Flash Attention: 9.49 ms
+  Standard Attention: 20.89 ms
+  Speedup: 2.20x
+  Max diff: 0.000003
+
+Benchmarking: batch_size=8, seq_len=128, dim=256, heads=8
+  Triton Flash Attention: 0.15 ms
+  Standard Attention: 0.13 ms
+  Speedup: 0.90x
+  Max diff: 0.000000
+
+Benchmarking: batch_size=8, seq_len=256, dim=256, heads=8
+  Triton Flash Attention: 0.16 ms
+  Standard Attention: 0.15 ms
+  Speedup: 0.96x
+  Max diff: 0.000010
+
+Benchmarking: batch_size=8, seq_len=512, dim=256, heads=8
+  Triton Flash Attention: 0.21 ms
+  Standard Attention: 0.32 ms
+  Speedup: 1.51x
+  Max diff: 0.000010
+
+Benchmarking: batch_size=8, seq_len=1024, dim=256, heads=8
+  Triton Flash Attention: 0.46 ms
+  Standard Attention: 0.90 ms
+  Speedup: 1.94x
+  Max diff: 0.000007
+
+Benchmarking: batch_size=8, seq_len=2048, dim=256, heads=8
+  Triton Flash Attention: 1.50 ms
+  Standard Attention: 3.42 ms
+  Speedup: 2.29x
+  Max diff: 0.000006
+
+Benchmarking: batch_size=8, seq_len=4096, dim=256, heads=8
+  Triton Flash Attention: 5.06 ms
+  Standard Attention: 11.30 ms
+  Speedup: 2.23x
+  Max diff: 0.000004
+
+Benchmarking: batch_size=8, seq_len=8192, dim=256, heads=8
+  Triton Flash Attention: 18.01 ms
+  Standard Attention: 42.18 ms
+  Speedup: 2.34x
+  Max diff: 0.000003
+
+
+Summary of Results:
+------------------
+Best speedup: 2.40x (Batch=4, Seq=2048)
+Triton outperforms PyTorch in 17/28 configurations
+
+Configurations where Triton is faster:
+  Batch=1, Seq=2048: 1.60x speedup
+  Batch=1, Seq=4096: 2.00x speedup
+  Batch=1, Seq=8192: 2.19x speedup
+  Batch=2, Seq=1024: 1.16x speedup
+  Batch=2, Seq=2048: 1.91x speedup
+  Batch=2, Seq=4096: 2.14x speedup
+  Batch=2, Seq=8192: 2.23x speedup
+  Batch=4, Seq=512: 1.22x speedup
+  Batch=4, Seq=1024: 1.74x speedup
+  Batch=4, Seq=2048: 2.40x speedup
+  Batch=4, Seq=4096: 2.22x speedup
+  Batch=4, Seq=8192: 2.20x speedup
+  Batch=8, Seq=512: 1.51x speedup
+  Batch=8, Seq=1024: 1.94x speedup
+  Batch=8, Seq=2048: 2.29x speedup
+  Batch=8, Seq=4096: 2.23x speedup
+  Batch=8, Seq=8192: 2.34x speedup
