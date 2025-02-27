@@ -35,10 +35,10 @@ Maximum difference between implementations is very small (0.00001)
 
 ## Implementation Components
 
-`TritonFlashAttention`: Main PyTorch module with Triton-optimized attention
-`StandardAttention`: Reference PyTorch implementation
-`fwd_kernel`: Triton kernel for Flash Attention algorithm
-`flash_attention_forward`: Interface between PyTorch and Triton
+- `TritonFlashAttention`: Main PyTorch module with Triton-optimized attention
+- `StandardAttention`: Reference PyTorch implementation
+- `fwd_kernel`: Triton kernel for Flash Attention algorithm
+- `flash_attention_forward`: Interface between PyTorch and Triton
 
 ## Installation Requirements
 ```
@@ -63,6 +63,37 @@ The visualization includes three key insights:
 3. **Speedup for Long Sequences** (right): Highlights the acceleration factor (PyTorch time / Triton time) achieved for sequences over 1024 tokens, showing consistent gains of 2.0-2.4x for longer sequences.
 
 This plot confirms that Triton Flash Attention provides significant performance benefits for longer sequences.
+
+## Usage
+
+### Basic Usage
+```python
+import torch
+
+# Create model
+model_dim = 512
+num_heads = 8
+flash_attn = TritonFlashAttention(dim=model_dim, heads=num_heads)
+
+# Create input tensor
+batch_size = 4
+seq_len = 2048
+x = torch.randn(batch_size, seq_len, model_dim).cuda()
+
+# Run flash attention
+output = flash_attn(x)
+```
+
+### Running Benchmarks
+
+```python
+# Define benchmark parameters
+batch_sizes = [1, 2, 4, 8]
+seq_lengths = [128, 256, 512, 1024, 2048, 4096, 8192]
+
+# Run benchmark
+results = benchmark(batch_sizes, seq_lengths, dim=256, heads=8, num_runs=10)
+```
 
 ## When to Use Which Implementation
 
