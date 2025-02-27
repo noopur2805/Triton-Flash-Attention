@@ -7,16 +7,16 @@ Our benchmark results show:
 
 ### Performance Crossover: Triton Flash Attention outperforms PyTorch at:
 
-Batch size 1: ≥ 2048 tokens
-Batch size 2: ≥ 1024 tokens
-Batch size 4 & 8: ≥ 512 tokens
+- Batch size 1: ≥ 2048 tokens
+- Batch size 2: ≥ 1024 tokens
+- Batch size 4 & 8: ≥ 512 tokens
 
 
 ### Speedup by Sequence Length:
 
-Short sequences (128-256): No advantage (0.79-0.88x)
-Medium sequences (512-1024): Modest speedup (1.10-1.41x)
-Long sequences (2048-8192): Significant speedup (2.05-2.24x)
+- Short sequences (128-256): No advantage (0.79-0.88x)
+- Medium sequences (512-1024): Modest speedup (1.10-1.41x)
+- Long sequences (2048-8192): Significant speedup (2.05-2.24x)
 
 
 ### Best Performance: 
@@ -24,10 +24,10 @@ Long sequences (2048-8192): Significant speedup (2.05-2.24x)
 
 ### Average Speedups by Batch Size:
 
-Batch 1: 1.27x
-Batch 2: 1.40x
-Batch 4: 1.66x
-Batch 8: 1.74x
+- Batch 1: 1.27x
+- Batch 2: 1.40x
+- Batch 4: 1.66x
+- Batch 8: 1.74x
 
 
 ### Numerical Stability: 
